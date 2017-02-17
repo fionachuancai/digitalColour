@@ -1,0 +1,22 @@
+{
+  "name": "dcs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "can_vas2.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/strongRoseKey/digitalColour.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/strongRoseKey/digitalColour/issues"
+  },
+  "homepage": "https://github.com/strongRoseKey/digitalColour#readme",
+  "dependencies": {
+    "quill": "^1.2.0"
+  }
+}

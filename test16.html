@@ -1,6 +1,14 @@
 <html>
+<link href="https://cdn.quilljs.com/1.0.0/quill.snow.css" rel="stylesheet">
+<script src="https://cdn.quilljs.com/1.0.0/quill.js"></script>
 
 <script type="text/javascript" src="can_vas2.js"></script>
+
+<!-- Include the Quill library -->
+<script src="https://cdn.quilljs.com/1.2.0/quill.js"></script>
+
+<link href="https://cdn.quilljs.com/1.2.0/quill.snow.css" rel="stylesheet">
+
 
 <script type="text/javascript">
 window.onload = function() {    
@@ -23,9 +31,9 @@ window.onload = function() {
 <br/>
 <br/>
 <br/>
-	
-	
-	
+  
+  
+  
 Select card type
 <select id="selectBox" onchange="changeFunc();">
    <option value=0>5" x 7"</option> 
@@ -36,7 +44,7 @@ Select card type
    <option value=5>5</option> 
    <option value=6>6</option> 
    <option value=7>7</option> 
-</select>	
+</select> 
 
 <div id="test">   
    <!-- <canvas id="canvas2" ></canvas>   -->
@@ -44,16 +52,9 @@ Select card type
    
 </div>
 
-
 <img id="Image" src="./img/img-03.jpg" alt="Image" style="display: none;">
 
 
-
-
-<script type="text/javascript">
-
-
-</script>
 <br/>
 <button onclick="land_port()">Landscape/Portrait</button>
 <button onclick="short_long()">Edge:short/Long</button>
@@ -110,6 +111,28 @@ What part of the image
      <input type="hidden" name="mytext" value="Content of the extra variable" >    
     <input type="submit" value="Make PDF" >
 </form>
+
+
+<!-- Create the editor container -->
+<div id="editor-container" style="height: 300px">
+  
+</div>
+
+
+<!-- Initialize Quill editor -->
+<script>
+  var quill = new Quill('#editor-container', {
+    modules: {
+      toolbar: [
+        [{ header: [1, 2, false] }],
+        ['bold', 'italic', 'underline'],
+        ['image', 'code-block']
+      ]
+    },
+    placeholder: 'Compose an epic...',
+    theme: 'snow'  // or 'bubble'
+  });
+</script>
 
 
 </body>   
